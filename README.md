@@ -19,14 +19,24 @@
 - Automatic relationship updates
 
 ### ✅ **Full API Routes**
+- `/api/auth/change-password` - Changing password
 - `/api/auth/register` - User registration
 - `/api/auth/login` - User login
 - `/api/auth/logout` - User logout
 - `/api/auth/me` - Get current user
+- `/api/auth/validate` - Verifies if the user is logged in
 - `/api/videos` - Video CRUD operations
 - `/api/videos/[id]/like` - Like/unlike videos
 - `/api/videos/[id]/comments` - Comment system
 - `/api/videos/[id]/purchase` - Video purchases
+- `/api/upload/video` - Video upload for posts - Cloudinary
+- `/api/upload/image`- Thumbnail upload for posts - Cloudinary
+- `/api/users/[username]` - Gets the user's info from the username
+- `/api/users/delete` - Deletes the user
+- `/api/users/following` - Gets the user's following list
+- `/api/users/suggested` - Suggests people that the user should follow
+- `/api/users/update` - Updates the user's information
+- `/api/wallet` - Operations with the user's wallet 
 - `/api/follow` - Follow/unfollow users
 - `/api/gifts` - Gift system
 - `/api/dashboard/stats` - Dashboard analytics
@@ -39,6 +49,10 @@ Create a `.env.local` file with:
 MONGODB_URI=mongodb://localhost:27017/videohub
 JWT_SECRET=your-super-secret-jwt-key-here
 NODE_ENV=development
+CLOUDINARY_CLOUD_NAME=...
+CLOUDINARY_API_KEY=...
+CLOUDINARY_API_SECRET=...
+
 \`\`\`
 
 ### 2. Install Dependencies
@@ -157,7 +171,7 @@ const response = await fetch('/api/follow', {
 
 ## 🚀 **Deployment Ready**
 
-The application is production-ready with:
+The application is almost production-ready with:
 - Environment-based configuration
 - Secure authentication flow
 - Database connection pooling
@@ -176,6 +190,7 @@ The application is production-ready with:
 - Analytics dashboard
 - Live streaming interface
 - AI content studio
+- Wallet page
 
 ### Components
 - Responsive design
@@ -199,11 +214,11 @@ The application is production-ready with:
 ## 🛠 **Development Tools**
 
 - **TypeScript** for type safety
-- **Next.js 14** with App Router
+- **Next.js 15** with App Router
 - **Tailwind CSS** for styling
 - **Radix UI** for components
 - **Mongoose** for MongoDB ODM
 - **JWT** for authentication
 - **bcrypt** for password hashing
 
-The platform is now fully functional and ready for production use!
+The platform is now almost fully functional and almost ready for production use!
